@@ -1,0 +1,530 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WurmAssistant</name>
+    </assembly>
+    <members>
+        <member name="F:WurmAssistant.FormSoundNotifyConfig.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.FormSoundNotifyConfig.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WurmAssistant.FormSoundNotifyConfig.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:WurmAssistant.FormWurmAssistantConfig.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.FormWurmAssistantConfig.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WurmAssistant.FormWurmAssistantConfig.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:WurmAssistant.Engine.WurmAssistantAbout">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:WurmAssistant.Engine.WurmAssistantAbout.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:WurmAssistant.Engine.WurmAssistantAbout.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="F:WurmAssistant.WurmAssistantAbout.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.WurmAssistantAbout.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.WurmAssistantAbout.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:WurmAssistant.ModuleClearTimestamps">
+            <summary>
+            This module clears timestamps from log messages for easier parsing
+            </summary>
+        </member>
+        <member name="T:WurmAssistant.Module">
+            <summary>
+            This is the base class for all new modules. It provides virtual methods for updating module and handling new log messages, as well as creating and managing module folder.
+            It also provides application-independent settings through Add/Set/GetSetting methods operating on a Dictionary class and saved to xml file.
+            By default: settings are loaded at module initialization and saved at application exit. They can also be forcefully saved/loaded through SaveLocalModuleSettingsToFile and LoadLocalModuleSettingsToFile.
+            All settings keys and values in Dictionary are as string. Use ToString() and Convert methods to store any non-string data. Assign settings to local variables at module init to avoid performance penalty of dictionary lookups and string conversions.
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.Module.#ctor(System.String)">
+            <summary>
+            Constructs new module using specified name as default module files folder
+            </summary>
+            <param name="moduleName">provide valid module name, cannot be empty or null</param>
+        </member>
+        <member name="M:WurmAssistant.Module.AddSetting(System.String,System.String)">
+            <summary>
+            Tries to add new setting entry.
+            </summary>
+            <param name="setting_name_key">Name of the setting, case sensitive</param>
+            <param name="setting_value">Default value for the setting</param>
+        </member>
+        <member name="M:WurmAssistant.Module.SetSetting(System.String,System.String,System.Boolean)">
+            <summary>
+            Sets specified setting key with specified new value. Will throw exception if key does not exist.
+            By default, settings are saved at application exit.
+            </summary>
+            <param name="setting_name_key">Name of existing setting, case sensitive</param>
+            <param name="setting_new_value">New value for the setting</param>
+            <param name="save_setting">Set true to force-save this setting to file immediately after it is updated. By default all settings are saved at application exit.</param>
+        </member>
+        <member name="M:WurmAssistant.Module.SetSetting(System.String,System.String)">
+            <summary>
+            Sets specified setting key with specified new value. Will throw exception if key does not exist.
+            By default, settings are saved at application exit.
+            </summary>
+            <param name="setting_name_key">Name of existing setting, case sensitive</param>
+            <param name="setting_new_value">New value for the setting</param>
+        </member>
+        <member name="M:WurmAssistant.Module.GetSetting(System.String)">
+            <summary>
+            Retrieves value for the specified setting. Will create new setting if doesn't exist with default "novalueset" as it's value.
+            Will throw exception if provided setting name_key was null or empty string while creating new setting entry.
+            </summary>
+            <param name="name_key">Name of the setting, case sensitive</param>
+            <returns>Value of the setting as string, "novalueset" string if new setting was created</returns>
+        </member>
+        <member name="M:WurmAssistant.Module.HandleNewLogEvents(System.Collections.Generic.List{System.String},WurmAssistant.GameLogState)">
+            <summary>
+            Override this to handle new log events, this method executes once per every log that has new message, per timer tick
+            </summary>
+            <param name="newLogEvents">List of all new wurm log messages, one event per line</param>
+            <param name="log">Reference to the log handler that provided these messages</param>
+        </member>
+        <member name="M:WurmAssistant.Module.Update">
+            <summary>
+            Override this to do any regular updates necessary in this module. Executes once per timer tick, always before HandleNewLogEvents.
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.Module.SaveLocalModuleSettingsToFile">
+            <summary>
+            Saves the dictionary containing all settings to modulesettings.xml file. Set the settings before calling this method.
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.Module.LoadLocalModuleSettingsFromFile">
+            <summary>
+            Loads all module settings from modulesettings.xml, automatically called in base constructor at the module initialization. 
+            Use only to explicitly force reload of settings.
+            </summary>
+        </member>
+        <member name="T:WurmAssistant.Logger">
+            <summary>
+            Logging class for the program internal log. Can be assigned to a multiline textbox, 
+            set to save to file or output log messages through a generic string List for custom use
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.Logger.setOutput(System.Windows.Forms.TextBox,System.Boolean,System.Collections.Generic.List{System.String})">
+            <summary>
+            Sets the output for the logger
+            </summary>
+            <param name="textbox">set to null if you dont need it, textbox should be set for multiline</param>
+            <param name="ifSaveToLogFile">set true if output should be saved to text file, default: programlog.txt in program folder</param>
+            <param name="listOutput">set null if you dont need it, otherwise assign list that will have messages added to it for customized display solution</param>
+        </member>
+        <member name="M:WurmAssistant.Logger.WriteLine(System.String)">
+            <summary>
+            Adds one text entry to logger
+            </summary>
+            <param name="note"></param>
+        </member>
+        <member name="M:WurmAssistant.Logger.RefreshLogTextBox">
+            <summary>
+            Creates and sends updated string array to the TextBox
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.Logger.SaveToLogFile(System.String)">
+            <summary>
+            Appends new log text entry to the log text file
+            </summary>
+            <param name="note"></param>
+        </member>
+        <member name="T:WurmAssistant.PlaylistEntry">
+            <summary>
+            Class used to populate main playlist
+            </summary>
+        </member>
+        <member name="F:WurmAssistant.PlaylistEntry.SoundName">
+            <summary>
+            Name of the sound (file name without extension)
+            </summary>
+        </member>
+        <member name="F:WurmAssistant.PlaylistEntry.Soundplayer">
+            <summary>
+            Soundplayer instance used to cache the sound file
+            </summary>
+        </member>
+        <member name="F:WurmAssistant.PlaylistEntry.Condition">
+            <summary>
+            Condition that triggers this sound
+            </summary>
+        </member>
+        <member name="F:WurmAssistant.PlaylistEntry.SpecialSettings">
+            <summary>
+            List of all special settings
+            </summary>
+        </member>
+        <member name="T:WurmAssistant.PlaylistEntryCacheable">
+            <summary>
+            Light version of PlaylistEntry used for caching lists for each log type
+            </summary>
+        </member>
+        <member name="T:WurmAssistant.PlaylistEntryDelayed">
+            <summary>
+            Not used
+            </summary>
+        </member>
+        <member name="T:WurmAssistant.LogQueueParseHelper">
+            <summary>
+            Arrays used to help parsing log messages
+            </summary>
+        </member>
+        <member name="T:WurmAssistant.ModuleSoundNotify">
+            <summary>
+            Main Sound Warnings module class
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.ModuleSoundNotify.#ctor(System.String)">
+            <summary>
+            Constructs new Sound Notify module object
+            </summary>
+            <param name="moduleName">provide unique name for this module, will be used as default module folder name</param>
+        </member>
+        <member name="T:WurmAssistant.TextFileObject">
+            <summary>
+            Customized text file wrapper, can create and write/read files dynamically, 
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.TextFileObject.#ctor(System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            constructs new text file wrapper
+            </summary>
+            <param name="fileAdress">path to the file</param>
+            <param name="doUpdate">set true to enable reading from this file</param>
+            <param name="alwaysUpdate">set true if update should happen regardless of file size changes, uses more resources</param>
+            <param name="createIfNotExists">set true if file should be created if does not exist</param>
+            <param name="isReadOnly">set true if writing to this file should be disabled, also disables creating file</param>
+            <param name="isGrowingOnly">set true if text is only appended to this file (more efficient file reading)</param>
+        </member>
+        <member name="M:WurmAssistant.TextFileObject.Update">
+            <summary>
+            Reads the file and updates List of lines
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.TextFileObject.ReadLine(System.Int32)">
+            <summary>
+            Returns one line from text file at specified index
+            </summary>
+            <param name="index">index of the line starting 0</param>
+            <returns>null if any exception</returns>
+        </member>
+        <member name="M:WurmAssistant.TextFileObject.ReadNextLine">
+            <summary>
+            Returns next line from text file, starting from the beginning and using internal counter.
+            Can be reset with resetReadPos()
+            </summary>
+            <returns>null if any exception</returns>
+        </member>
+        <member name="M:WurmAssistant.TextFileObject.ReadNextLineOffset(System.Int32)">
+            <summary>
+            Returns next line from text file, with an offset
+            </summary>
+            <param name="offset">offset that causes line number minus offset to be treated as last line number</param>
+            <returns>null if any exception</returns>
+        </member>
+        <member name="M:WurmAssistant.TextFileObject.ReadLastLine">
+            <summary>
+            Returns last line in file
+            </summary>
+            <returns>null if any exception</returns>
+        </member>
+        <member name="M:WurmAssistant.TextFileObject.GetLastLine(System.Int32)">
+            <summary>
+            Returns last line in file with offset
+            </summary>
+            <param name="offset">offset that causes line number minus offset to be treated as last line number</param>
+            <returns> null if any exception</returns>
+        </member>
+        <member name="M:WurmAssistant.TextFileObject.resetReadPos">
+            <summary>
+            Resets internal iterator for getNextLine methods to 0
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.TextFileObject.getLastIndex">
+            <summary>
+            Returns index of the last line in this file, (indexing starts at 0)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WurmAssistant.TextFileObject.WriteLine(System.String)">
+            <summary>
+            Appends a new text line to the file
+            </summary>
+            <param name="text"></param>
+            <returns>false if operation failed</returns>
+        </member>
+        <member name="M:WurmAssistant.TextFileObject.WriteLines(System.Collections.Generic.List{System.String})">
+            <summary>
+            Appends a List of new lines to the file
+            </summary>
+            <param name="textlist"></param>
+            <returns>false if operation failed</returns>
+        </member>
+        <member name="M:WurmAssistant.TextFileObject.RewriteFile(System.Collections.Generic.List{System.String})">
+            <summary>
+            Clears the file and writes provided new List of lines to this file
+            </summary>
+            <param name="textlist"></param>
+            <returns>false if operation failed</returns>
+        </member>
+        <member name="M:WurmAssistant.TextFileObject.ClearFile">
+            <summary>
+            Clears the file
+            </summary>
+            <returns>false if clearing failed</returns>
+        </member>
+        <member name="M:WurmAssistant.TextFileObject.getAllLines">
+            <summary>
+            Returns all lines as string array
+            </summary>
+            <returns>all lines in this text file</returns>
+        </member>
+        <member name="T:WurmAssistant.WurmAssistant">
+            <summary>
+            Main class for Wurm Assistant, initializes all the interface and starts the engine. Also provides universal log output.
+            </summary>
+        </member>
+        <member name="F:WurmAssistant.WurmAssistant.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.WurmAssistant.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WurmAssistant.WurmAssistant.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.WurmAssistant.timer1_Tick(System.Object,System.EventArgs)">
+            <summary>
+            Timer used as main loop for the Engine
+            </summary>
+        </member>
+        <member name="T:WurmAssistant.WurmAssistantEngine">
+            <summary>
+            Wurm Assistant Engine. Handles all the logs and modules, provides all new log messages to all listed modules.
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.WurmAssistantEngine.#ctor(System.String)">
+            <summary>
+            constructs a new instance of Wurm Assistant Engine
+            </summary>
+            <param name="wurmloglocation">path to the Wurm Online logs folder</param>
+        </member>
+        <member name="M:WurmAssistant.WurmAssistantEngine.Update">
+            <summary>
+            Retrieves new log messages from log wrappers and forwards them to all modules
+            </summary>
+        </member>
+        <member name="T:WurmAssistant.GameLogTypes">
+            <summary>
+            Enum representing every log type in Wurm Online. Note: all PM logs have the same type
+            </summary>
+        </member>
+        <member name="T:WurmAssistant.GameLogTypesEX">
+            <summary>
+            Publictly accessible extension of GameLogTypes Enum, provides mapping for string name to enum and reverse version for easy lookups
+            </summary>
+        </member>
+        <member name="T:WurmAssistant.GameLogState">
+            <summary>
+            Wrapper around single Wurm Online log file. Auto aquires the file when possible and auto reaquires proper file at midnight change.
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.GameLogState.#ctor(System.String,WurmAssistant.GameLogTypes)">
+            <summary>
+            constructs a new instance of this class
+            </summary>
+            <param name="wurmLogDirAddress">path to the Wurm Online Logs folder for chosen player account</param>
+            <param name="logtype">type of this log, determines what files will be searched for aquiring</param>
+        </member>
+        <member name="M:WurmAssistant.GameLogState.#ctor(System.String,WurmAssistant.GameLogTypes,System.String)">
+            <summary>
+            constructors a new instance of this class, overload specifically for PM logs
+            </summary>
+            <param name="wurmLogDirAddress">path to the Wurm Online Logs folder for chosen player account</param>
+            <param name="logtype">type of this log, determines what files will be searched for aquiring (note: should be PM for this overloaded constructor)</param>
+            <param name="name">name of the PM player</param>
+        </member>
+        <member name="M:WurmAssistant.GameLogState.getLogType">
+            <summary>
+            Returns this wrapper log type
+            </summary>
+            <returns>Enum GameLogTypes</returns>
+        </member>
+        <member name="M:WurmAssistant.GameLogState.UpdateAndGetNewEvents">
+            <summary>
+            Updates the snapshot of log file contents, retrieves and returns list of new lines in the log since previous update
+            </summary>
+            <returns>null if no new lines</returns>
+        </member>
+        <member name="T:WurmAssistant.PublicAccessHelper">
+            <summary>
+            Statically accessible reference helper.
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.SoundBank.PlaySound(System.String)">
+            <summary>
+            Plays sound by name, if the sound is cached
+            </summary>
+            <param name="name">Name of the sound, case sensitive</param>
+        </member>
+        <member name="M:WurmAssistant.SoundBank.getSoundPlayer(System.String)">
+            <summary>
+            Returns SoundPlayer instance for this sound name
+            </summary>
+            <param name="soundname">Name of the sound, case sensitive</param>
+            <returns>SoundPlayer if exists, else null</returns>
+        </member>
+        <member name="M:WurmAssistant.SoundBank.getSoundsList">
+            <summary>
+            unused, list made public
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WurmAssistant.ConsoleManager">
+            <summary>
+            Sets and disables writing console output to text file or to console.
+            Used for debugging only.
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.ConsoleManager.EnableConsoleTraceOut">
+            <summary>
+            Adds console as trace listener for debugging messages
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.ConsoleManager.EnableConsoleFileOut">
+            <summary>
+            Redirects console output to text file "consoleout.txt"
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.ConsoleManager.EnableConsoleFileOut(System.String)">
+            <summary>
+            Redirects console output to specified text file
+            </summary>
+            <param name="address">valid file name including extension</param>
+        </member>
+        <member name="M:WurmAssistant.ConsoleManager.DisableConsoleFileOut">
+            <summary>
+            Disables redirecting console output, restores default out, cleans the resources
+            </summary>
+        </member>
+        <member name="F:WurmAssistant.FormSoundNotifyConfigDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.FormSoundNotifyConfigDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WurmAssistant.FormSoundNotifyConfigDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:WurmAssistant.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:WurmAssistant.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:WurmAssistant.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:WurmAssistant.ModuleTimerAssistAccess">
+            <summary>
+            Statically accessible time snapshot for this Tick, as long as ModuleTimerAssist remains updated
+            </summary>
+        </member>
+        <member name="F:WurmAssistant.ModuleTimerAssistAccess.currentTime">
+            <summary>
+            Time at the moment of this module last update
+            </summary>
+        </member>
+        <member name="F:WurmAssistant.ModuleTimerAssistAccess.millisecondsPassed">
+            <summary>
+            Milliseconds (1/1000 of a second) that passed since last update 
+            </summary>
+        </member>
+        <member name="M:WurmAssistant.ModuleTimerAssistAccess.getMillisPassedSinceDateTime(System.DateTime)">
+            <summary>
+            Milliseconds (1/1000 of a second) that passed since provided DateTime 
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WurmAssistant.ModuleTimerAssist">
+            <summary>
+            Helper module handling timing assistance for other modules
+            </summary>
+        </member>
+    </members>
+</doc>

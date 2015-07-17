@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Temporary help reference:
+
+ADDING HORSES TO DATABASE
+
+First make sure, that "enable capturing data from game logs" option is turned on. If you turn this off, no data will be fetched to assistant at all. (Generally good idea only, if you go to another server or otherwise risk interacting with same-named horses).
+
+How to?
+- smile at a horse
+- before 5 seconds passes, examine that horse
+- repeat on other horses
+
+This will add following data:
+- horse name
+- all visible traits
+- a note at which AH skill level they were examined
+- father
+- mother
+- who is caring for this horse
+- estimated delivery time if pregnant
+
+You can also change to which herd new horses will go.
+
+Smilexamining™ horse already existing in database will update it's data.
+Examining horse without smiling first, will not do anything.
+
+In addition, actions such as breeding, burying and such will update the correct horse.
+NOTE: since breeding messages never tell delivery date, in order to get accurate information, you need to smilexamine™ it afterwards.
+
+MODIFYING HERDS AND HORSES
+
+You can do this with herds:
+- create new herd
+- merge current herd with another herd (old one disappears, all horses in old one are added to target one)
+- rename herd
+- delete herd
+Herd names must be unique. All horses will be updated correctly with in-game events, regardless which herd they belong to.
+
+And you can do this with horse list:
+- mouse left-click: displays breeding help and traits summary (on the right side)
+- mouse doubleclick: view summary about horse
+- mouse rightclick: context menu:
+-- add new horse (you need to enter all data manually)
+-- move horse to another herd
+-- edit horse details
+-- delete horse
+
+BREEDING ASSISTANT
+(this thing may still be buggy)
+
+When you click on a horse, you will see the entire list colored, according to how good or bad idea the program believes it is to try breeding them. The colors range from light red through yellow to light green.
+In addition, the best candidate is always highlighted in cyan.
+
+Actual colors you will see, depend largely on how trait weights are set. This can be done in the right side over trait list.
+You should set positive values for good traits and negative for bad traits. The better or worse you feel they are, the higher number should be chosen. 
+Rule of thumb: 
+good trait: positive value; 
+bad trait: negative value;
+unimportant trait: leave at zero.
+
+The trait values that I use, are already set in the program by default.
+
+If you set the weights like the above:
+Red will always mean a lot of bad traits or very bad idea to breed (like inbreeding). Yellow means either traitless horses, or mixed good/bad traiters. Green means many good traits, the more, the greener it looks.
+
+There are also a few extra options:
+- "advise only available": this will exclude pregnant and not-in-mood horses (also dead, if any gets marked like this)
+- "include potential value": potential value is an average value of all traits that you can't see (they appear as "unknown" on trait list), the assistant will assume worst case scenario - that the horse can have all of them
+- "prefer pairing for missing traits": normally if 2 horses have same good trait, both values are summed, this setting will cause the duplicates to be ignored. This is a good setting, if you want to breed a higher trait count horses, this setting does NOT affect bad traits!
+- "exclude if any negative traits": this causes any horse, with at least one bad trait, to appear red on the list. Good for weeding.
+- "do not exclude inbreeding": by default, any inbreeding causes the horses to be marked red. This setting will instead just shift their color slightly toward red (it's like a value penalty). This setting is good when inbreeding can't be avoided, otherwise inbreeding is a bad idea. If you set this option, unless horses have really good traits, they will have a color around orange-yellow.
+
+Finally, you can disable advisor if colors start to get on your nerves.
+
+PLANNED BUT NOT YET IMPLEMENTED:
+
+- live advisor: supposed to popup breeding ideas when you start leading a horse and when attempting to breed it with another
+- exporting functions: so that a herd or part of it can be dumped into a file for sharing or posting
+- anything else, that may be suggested by someone during beta</value>
+  </data>
+</root>

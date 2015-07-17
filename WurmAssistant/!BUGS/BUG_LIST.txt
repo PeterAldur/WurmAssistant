@@ -1,0 +1,17 @@
+﻿
+CALENDAR
+- shows wrong times for some users, 
+supected cause: http extractor does not start,
+because? "welcome to" message must be different or not present in their logs
+
+LOGSEARCHER
+- empty player dirs from failed creation at wurm launcher, rarely cause logsearcher to go in loops, cause unknown, could not replicate
+
+TIMERS
+- epic-freedom timer issues
+
+SOUND NOTIFY
+- still many events not causing the events to trigger
+
+WA GENERAL
+- popup is still stealing focus from main WA window

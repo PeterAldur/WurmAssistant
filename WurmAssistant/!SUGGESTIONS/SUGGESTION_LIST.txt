@@ -1,0 +1,66 @@
+﻿
+GENERAL:
+- choice where to install
+- configuration wizard on first run
+- embedded python interpreter
+- linux and macOS support
+- guides / videopresentation for every module
+
+TIMERS
+- counter for prayers today
+- repeat sound warning option
+- grooming reminder
+- question timer recognizing failures as well
+
+SOUND NOTIFY
+- extensible queue sound conditions list
+
+GRANGER
+- option to ignore inbreeding with general "horse" and "hellhorse"
+- generational inbreeding? does such thing exist?
+- warnings for diseased
+- age tracking, foal check for breeding
+- dedicated color column
+- support for alts
+- exporting to TXT
+
+DKSprocket:
+Would it be possible to add a column (possibly optional) where we can enter the color of the horse? 
+It could default to "Unkown" if we haven't set it manually. Bonus point if the color selection actually 
+colored something so it would be easy to see all the colors in a herd. I know the comment field could be used, 
+but this would make it a lot more convenient. I am not asking for breeding suggestions for colors, just a manual 
+field to help keep track. 
+
+OTHER
+
+Nomadikhan suggestion:
+
+Perhaps, something to parse skill gains.  Maybe have it record average skillgain per hour.  
+It'd be nice to see, for example, my average gains on an iron vein for an hour, 
+then switch and see my average gains on a lead vein the next hour.  
+Useful for putting all these "perfect skillgain" myths to rest.
+
+Also, for combat, record hits, misses, parries, glances... to yield an overall hit ratio?  
+Trivial maybe, but would be interesting to see my average hit percentage in a given hunting trip or pvp skirmish.  
+The same for block, to see an averaged block ratio/percentage.
+
+track medit path advance cooldown (missing question failures still)
+autostart? seems not to work
+
+------
+
+Maru suggestion:
+
+So, the feature I was talking about would allow the user to choose a specific search term and display information 
+about that search easily through the UI for quick reference.
+
+For instance, let's say I want to know the total number of saplings I've planted. I would choose to edit the frame 
+which I want to display the number. I would enter the string, "You have planted a sapling." I would choose 
+that I wanted to display the number of times that string appears in my event log. Perhaps I could choose that I want 
+to display the number of times that string is found in the logs but only for the past day, or hour. 
+
+I wish I could be more clear. Basically, I want to see a persistent UI element which displays information related 
+to custom log searches based on user string entry, time & date and other data related to a search, like the number of times 
+a string is found in the logs.
+
+-----

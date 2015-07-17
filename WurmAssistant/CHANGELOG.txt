@@ -1,0 +1,254 @@
+﻿1.4.0.30
+- Priest progressbar value validations.
+
+1.4.0.29
+- Increased server status feed accuracy treshhold from +-1 to +-10 minutes.
+
+1.4.0.27
+- Granger patch for Epic skill-curve issues
+
+1.4.0.26
+- Granger bugfix
+
+1.4.0.25
+- Bugfix for sound engine causing crashes, when system has no sound card present
+
+1.4.0.24
+- Bugfix for updating horses, where father parent is no longer on "that" world
+
+1.4.0.23
+- Fixes for recognizing correct wurm date
+- Granger live-log-reading features are now enabled by default
+
+1.4.0.21
+- Better exception handling and logging for popup code
+
+=== V2.0 coding started, changes above this place need to be reimplemented
+
+1.4.0.19
+- Granger bugfix: fixed sorting by comment
+
+1.4.0.18
+- General bugfix: recoded skill values parsing to be fully culture invariant
+- Granger bugfixes: gender recognition, trait recognition, layout
+
+1.4.0.17
+- Bufix: Granger rename herd will now work correctly
+
+1.4.0.16
+- New feature: Granger
+- Bugfixes and tweaks
+
+1.3.2.5
+- Some bugfixes
+
+1.3.2.4
+- NOTE: bugfix will now inform what was fixed, instead of what was the issue
+- Bugfix: meditation timer will now correctly show cooldown for the very first question (untested for other paths than love)
+
+1.3.2.3
+- Bugfix: meditation question timer manual option sets cooldowns for wrong levels (-1)
+
+1.3.2.2
+- Bugfix: log searcher cache becomes inaccurate if system time changes on user computer
+- Bugfix: the program crashes due to log searcher cache storing invalid day numbers for monthly logs
+
+1.3.2.1
+- Bugfix: skill gain extraction from line causing exception in priest timers
+
+1.3.2.0
+- Favor notify
+
+1.3.1.7
+- Improvement: logging mode setting in tracker config window is now labeled and warns about it needing to be set correctly, additional notes how to set added to the textbox
+
+1.3.1.6
+- Improvement: wurm datetime will now also be verified against server online feeds after log history lookup, in addition to live logs
+
+1.3.1.5
+- Bufix: wurm datetime updates coming from log history were incorrectly dismissed or applied based on last live logs datetime update
+
+1.3.1.4
+- 1.3.1.3 bugfix rolled back
+
+1.3.1.3
+- Bugfix: for some players, registry lookup returns incorrect path, pointing to players subdir rather than wurm dir.
+
+1.3.1.2
+- Bugfix: medit cooldown showing timer based on current medit level, instead of next one
+
+1.3.1.1
+- Updated what's new entry, so it showed something meaningful
+
+1.3.1.0
+- Feature improvement: lock picking timer
+
+1.3.0.2
+- Bugfixes: alignment gains not being found from log history, sermon and alignment notifies not working, settings not saved properly when running with alts
+
+1.3.0.1
+- Auto-open character config on app launch if tracked player list if empty
+
+1.3.0.0
+- New feature: alt support!
+- Bugfixes: many LogSearcher parsing and priest timer issues
+
+1.2.1.1
+- Bugfix: Sermon not resetting prayer count
+- Bugfix: Sounds for priest timers not being correctly updated after change
+- Improvement: Some alignment ticks tracking, white/blacklighter choice
+
+1.2.1.0
+- New feature: Prayer and Sermon timers
+- Improvement: Option to manually set meditation question timer
+- Bugfix: Errors while setting custom SoundNotify conditions
+- Bugfix: Meditation timer data not updating correctly if uptime reset happens while program is running
+
+1.2.0.13
+- Improvement: LogSearcher: If "PM Player" is left empty, all PM logs within specified dates will be searched for matches. 
+Results grouped per day per conversation.
+- Update: added Pristine and Release servers to http monitor
+
+1.2.0.12
+- Bugfix: every next season popup would duplicate previous season popup contents
+- Bugfix: guide would not open for some users
+- Improvement: slightly redesigned queue sound options
+- Improvement: playlist entries are now case-insensitive, support wildcards, remove timestamps automatically from copypasted entries
+and have an option to use full regex semantics
+- Improvement: help popups for SoundNotify
+
+1.2.0.11
+- Improvement: better date format for calendar notifies
+- Bugfix: file access exception when program set to daily logs and any search is performed
+
+1.2.0.10
+- Improvement: added debug code for all threaded operations to provide valid feedback on crashes in those regions
+
+1.2.0.9
+- Timers Medit improvement: Time to next question attempt! (only for successful previous attempt)
+- Bugfix: season end displayed incorrectly if there was less than 1 wurm day to the end
+- New option: start minimized
+- Update: some of the sound triggers for new crafts, more will come as they are found
+- Improvement: validating uptime and wurm date via http check
+
+1.2.0.8
+- Bugfix: uptime incorrectly set on program startup in certain situations
+
+1.2.0.7
+- Bugfix: long meditation cooldown not being recognized correctly by log live-reader
+- Bugfix: sleep bonus reminders firing despite no meditation
+- Tweak: sleep bonus time display will now just count up, change colors and do notifications when it hits 5:00 minutes
+- Bugfix: trying to close app while engine not running resulting in errors and making it impossible to close it without killing task
+
+1.2.0.6
+- Fixed an issue with main Wurm Assistant settings not being properly saved on app exit
+
+1.2.0.5
+- Some calendar season data was off
+
+1.2.0.4
+- Uptime debug output no longer is visible when Meditation timer is disabled
+
+1.2.0.3
+- Minor adjustments in error log output to reduce error spam
+
+1.2.0.2
+- Proper fix for handling any form of incorrect path to Wurm log files
+- Redesign of player choice window to make it more clear on how to use it
+
+1.2.0.1
+- Quick hotfix for a crash, when chosen path to Wurm log files was incorrect
+
+1.2.0.0
+- New module: Log Searcher, performs custom searches over all logs
+- New module: Timers: Meditation, tracks and notifies when it's ready to meditate again and remind to turn off sleep bonus
+- New module: Calendar: tracks wurm seasonal plants and notifies when they are in season
+- improvement: Most of the persistent data moved into SQLite database
+- improvement: Log Searcher now assists other modules in getting past data
+- Minor: Added option to visit official resources thread on Wurm forums
+- Minor: Added a link to guide
+- bugfix: sound fix for giftwrapping
+- bugfix: fixed pm log tracking for monthly mode
+
+1.1.1.6 - 1.1.1.9
+- more attempts to fix update bug (seems finally fixed)
+
+1.1.1.5
+- attempt to fix an update bug
+
+1.1.1.4
+- fixed a bug where empty playlist file would cause the engine to crash
+
+1.1.1.3
+- attempt to fix an update bug
+
+1.1.1.1 - 1.1.1.2
+- final publishing tests
+
+1.1.1.0
+- active flag added for every playlist entry (inactive will not play), switchable via mouse-right-click
+- changed playlist file format to support this and added conversion code for old playlists
+
+1.1.0.16
+- default queue sound delay is now 1.0 seconds
+
+1.1.0.15
+- update improvements
+
+1.1.0.12 - 1.1.0.14
+- error handling for a certain xml related bug
+
+1.1.0.10 - 1.1.0.11
+- attempts to remove annoying dependency on VC redist
+
+1.1.0.9
+- fixed bug causing settings to not be loaded
+
+1.1.0.8
+- Attempt to fix CLR20r3 crash
+
+1.1.0.6 - 1.1.0.7
+- Publish tweaks
+
+1.1.0.5
+- Fixed where sleep mode would bug if multiple javaw processes were run
+
+1.1.0.4
+- Fixed some menu bugs
+
+1.1.0.3
+- Fixed content bugs
+
+1.1.0.1 - 1.1.0.2
+- "What's new" window
+- Update improvements and bugfixes
+
+1.1.0.0
+- program now stores all data in AppData\Local\AldurCraft\WurmAssistant\ and preserves it between updates and reinstalls
+- autoupdate when program is launched
+- what's new window to appear on every first launch after update
+- added support for both daily and monthly logging, with default set to monthly
+- player character choice UI, autofinds correct wurm log path, allows to set logs as daily or monthly
+- sleep mode: Wurm logs processing disabled when game client is not launched, auto-reenabled when it is launched
+- replaced default .NET player with irrKlang sound engine, which enables:
+-- multiple sounds to play simultaneously
+-- more formats supported in addition to default RIFF WAVE (WAV): OGG, MP3, FLAC, MOD, IT, S3D, XM
+-- global volume setting for all sounds
+-- individual volume adjustments per each sound
+- UI for managing sound bank (adding, deleting, renaming and adjusting volume for individual sounds)
+- queue delay setting resolution increased to 100 ms
+- better memory management for log readers
+- more tweaks and bugfixes
+
+1.0.0.10
+- added option to minimize to tray
+- tray context menu
+- edit button for playlist entries
+- all sounds mute toggle
+- some ui tweaks
+- fixed few more bugs and missing conditions for queue sound
+
+1.0.0.6 - 1.0.0.9
+- minor bug fixes
+
+

@@ -1,0 +1,609 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{038AFBAC-DAF0-4329-A47E-8F7225E088BF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WurmAssistant</RootNamespace>
+    <AssemblyName>WurmAssistant.exe</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>ftp://cba.pl/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://wurmassistant.aldurcraft.cba.pl/</InstallUrl>
+    <TargetCulture>en-US</TargetCulture>
+    <ProductName>Wurm Assistant</ProductName>
+    <PublisherName>Piotr %27Aldur%27 Cichor</PublisherName>
+    <MinimumRequiredVersion>1.1.1.6</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>32</ApplicationRevision>
+    <ApplicationVersion>1.4.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>WurmAssistantIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9179F6D6804D4542CC9DAC3F6DA7D62BDD425AB9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Beta|x86'">
+    <OutputPath>..\..\..\..\..\Published\Beta\Latest\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\WurmAssistant.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'WA_TEST|x86'">
+    <OutputPath>bin\x86\WA_TEST\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'AsLibrary|x86'">
+    <OutputPath>bin\x86\AsLibrary\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HSLColor">
+      <HintPath>..\..\..\..\..\Lib\HSLColor.dll</HintPath>
+    </Reference>
+    <Reference Include="irrKlang.NET4">
+      <HintPath>..\..\..\..\..\Lib\irrKlang.NET4.dll</HintPath>
+    </Reference>
+    <Reference Include="ListViewNF">
+      <HintPath>..\..\..\..\..\Lib\ListViewNF.dll</HintPath>
+    </Reference>
+    <Reference Include="NotificationWindow">
+      <HintPath>..\..\..\..\..\Lib\NotificationWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="NotifyWindowExt">
+      <HintPath>..\..\..\..\..\Lib\NotifyWindowExt.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\..\..\Lib\sqlite-netFx40-static-binary-Win32-2010-1.0.82.0\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>..\..\..\..\..\Lib\sqlite-netFx40-static-binary-Win32-2010-1.0.82.0\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engine\CharacterManager\CharacterEngine.cs" />
+    <Compile Include="Engine\CharacterManager\FormCharacterManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\CharacterManager\FormCharacterManager.Designer.cs">
+      <DependentUpon>FormCharacterManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engine\WurmPaths.cs" />
+    <Compile Include="Engine\WurmAssistantEngineV2.cs" />
+    <Compile Include="Engine\FormWurmAssistantUserGuide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\FormWurmAssistantUserGuide.Designer.cs">
+      <DependentUpon>FormWurmAssistantUserGuide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engine\LogsManager\LogsManager.cs" />
+    <Compile Include="Engine\ModuleManager\ModuleManager.cs" />
+    <Compile Include="Modules\Calendar\FormCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Calendar\FormCalendar.Designer.cs">
+      <DependentUpon>FormCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Calendar\FormChooseSeasons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Calendar\FormChooseSeasons.Designer.cs">
+      <DependentUpon>FormChooseSeasons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Calendar\ModuleCalendar.cs" />
+    <Compile Include="Modules\Granger\Enums.cs" />
+    <Compile Include="Modules\Granger\FormAdjustWeights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\FormAdjustWeights.Designer.cs">
+      <DependentUpon>FormAdjustWeights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\FormAdjustWeightsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\FormAdjustWeightsEdit.Designer.cs">
+      <DependentUpon>FormAdjustWeightsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\FormChooseHerd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\FormChooseHerd.Designer.cs">
+      <DependentUpon>FormChooseHerd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\FormGrangerDebug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\FormGrangerDebug.Designer.cs">
+      <DependentUpon>FormGrangerDebug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\FormGrangerHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\FormGrangerHelp.Designer.cs">
+      <DependentUpon>FormGrangerHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\FormHerdName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\FormHerdName.Designer.cs">
+      <DependentUpon>FormHerdName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\FormHorseManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\FormHorseManager.Designer.cs">
+      <DependentUpon>FormHorseManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\FormManageHorse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\FormManageHorse.Designer.cs">
+      <DependentUpon>FormManageHorse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\GrangerAI.cs" />
+    <Compile Include="Modules\Granger\GrangerDebug.cs" />
+    <Compile Include="Modules\Granger\GrangerHelpers.cs" />
+    <Compile Include="Modules\Granger\Herd.cs" />
+    <Compile Include="Modules\Granger\HerdList.cs" />
+    <Compile Include="Modules\Granger\Horse.cs" />
+    <Compile Include="Modules\Granger\ModuleGranger.cs" />
+    <Compile Include="Modules\Granger\TraitValues.cs" />
+    <Compile Include="Modules\Timers\FormAlignmentHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\FormAlignmentHelp.Designer.cs">
+      <DependentUpon>FormAlignmentHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Timers\FormChooseQTimerManually.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\FormChooseQTimerManually.Designer.cs">
+      <DependentUpon>FormChooseQTimerManually.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Timers\FormGodChoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\FormGodChoice.Designer.cs">
+      <DependentUpon>FormGodChoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Timers\FormTimersDebug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\FormTimersDebug.Designer.cs">
+      <DependentUpon>FormTimersDebug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Timers\FormVerifyAlignment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\FormVerifyAlignment.Designer.cs">
+      <DependentUpon>FormVerifyAlignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityClasses\PopupManager\FormPopupContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityClasses\PopupManager\FormPopupContainer.Designer.cs">
+      <DependentUpon>FormPopupContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityClasses\PopupManager\PopupManager.cs" />
+    <Compile Include="UtilityClasses\SoundBank\FormChooseSound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityClasses\SoundBank\FormChooseSound.Designer.cs">
+      <DependentUpon>FormChooseSound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Timers\FormTimers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\FormTimers.Designer.cs">
+      <DependentUpon>FormTimers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityClasses\DebugDump.cs" />
+    <Compile Include="UtilityClasses\Logger\TSafeLogger.cs" />
+    <Compile Include="Modules\LogSearcher\FormLogSearcher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\LogSearcher\FormLogSearcher.Designer.cs">
+      <DependentUpon>FormLogSearcher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\LogSearcher\Searcher\LogSearchManager.cs" />
+    <Compile Include="Modules\LogSearcher\Searcher\LogSearchData.cs" />
+    <Compile Include="Modules\LogSearcher\Searcher\ProgressWindow\ProgressWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\LogSearcher\Searcher\ProgressWindow\ProgressWindow.Designer.cs">
+      <DependentUpon>ProgressWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engine\FormWurmAssistantChoosePlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\FormWurmAssistantChoosePlayer.Designer.cs">
+      <DependentUpon>FormWurmAssistantChoosePlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engine\FormWurmAssistantConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\FormWurmAssistantConfig.Designer.cs">
+      <DependentUpon>FormWurmAssistantConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engine\FormWurmAssistantUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\FormWurmAssistantUpdate.Designer.cs">
+      <DependentUpon>FormWurmAssistantUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engine\WurmAssistantAbout1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WurmAssistantAbout.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ClearTimestamps\ModuleClearTimestamps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\HorseDump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\LogSearcher\ModuleLogSearcher.cs" />
+    <Compile Include="Modules\Module.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\SoundNotify\FormSoundNotifyConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SoundNotify\FormSoundNotifyConfig.Designer.cs">
+      <DependentUpon>FormSoundNotifyConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SoundNotify\FormSoundNotifyConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SoundNotify\FormSoundNotifyConfigDialog.Designer.cs">
+      <DependentUpon>FormSoundNotifyConfigDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SoundNotify\ModuleSoundNotify.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\ModuleTimers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\TimingAssist\ModuleTimingAssist.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityClasses\AC_SettingsDB.cs" />
+    <Compile Include="UtilityClasses\Database\SQLiteDB.cs" />
+    <Compile Include="UtilityClasses\AC_Settings_deprec.cs" />
+    <Compile Include="Modules\LogSearcher\Searcher\LogFileSearcherV2.cs" />
+    <None Include="Modules\LogSearcher\Searcher\Depr_LogFileSearcher.cs" />
+    <Compile Include="UtilityClasses\SoundBank\FormSoundBankRename.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityClasses\SoundBank\FormSoundBankRename.Designer.cs">
+      <DependentUpon>FormSoundBankRename.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityClasses\GeneralHelper.cs" />
+    <Compile Include="UtilityClasses\SoundBank\Old SoundBank.cs" />
+    <Compile Include="UtilityClasses\SoundBank\FormSoundBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityClasses\SoundBank\FormSoundBank.Designer.cs">
+      <DependentUpon>FormSoundBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityClasses\SoundBank\SB_SoundPlayer.cs" />
+    <Compile Include="UtilityClasses\SoundBank\SoundBank.cs" />
+    <Compile Include="UtilityClasses\ConsoleManager.cs" />
+    <Compile Include="Engine\WurmAssistantAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\WurmAssistantAbout.Designer.cs">
+      <DependentUpon>WurmAssistantAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engine\WurmAssistantEngine.cs" />
+    <Compile Include="Engine\WurmAssistant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\WurmAssistant.Designer.cs">
+      <DependentUpon>WurmAssistant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityClasses\GameLogState.cs" />
+    <Compile Include="UtilityClasses\Logger\Logger.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="UtilityClasses\TextFileObject.cs" />
+    <None Include="Resources\DeleteRed.png" />
+    <None Include="Resources\paypal_donate.png" />
+    <Content Include="!BUGS\Granger.txt" />
+    <Content Include="!BUGS\BUG_LIST.txt" />
+    <Content Include="!SUGGESTIONS\SUGGESTION_LIST.txt" />
+    <Content Include="!REQ_WURMDEVS\Timers_alignment.txt" />
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Engine\CharacterManager\FormCharacterManager.resx">
+      <DependentUpon>FormCharacterManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Engine\FormWurmAssistantChoosePlayer.resx">
+      <DependentUpon>FormWurmAssistantChoosePlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Engine\FormWurmAssistantConfig.resx">
+      <DependentUpon>FormWurmAssistantConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Engine\FormWurmAssistantUpdate.resx">
+      <DependentUpon>FormWurmAssistantUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Engine\FormWurmAssistantUserGuide.resx">
+      <DependentUpon>FormWurmAssistantUserGuide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Calendar\FormCalendar.resx">
+      <DependentUpon>FormCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Calendar\FormChooseSeasons.resx">
+      <DependentUpon>FormChooseSeasons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\FormAdjustWeights.resx">
+      <DependentUpon>FormAdjustWeights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\FormAdjustWeightsEdit.resx">
+      <DependentUpon>FormAdjustWeightsEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\FormChooseHerd.resx">
+      <DependentUpon>FormChooseHerd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\FormGrangerDebug.resx">
+      <DependentUpon>FormGrangerDebug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\FormGrangerHelp.resx">
+      <DependentUpon>FormGrangerHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\FormHerdName.resx">
+      <DependentUpon>FormHerdName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\FormHorseManager.resx">
+      <DependentUpon>FormHorseManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\FormManageHorse.resx">
+      <DependentUpon>FormManageHorse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\LogSearcher\FormLogSearcher.resx">
+      <DependentUpon>FormLogSearcher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\LogSearcher\Searcher\ProgressWindow\ProgressWindow.resx">
+      <DependentUpon>ProgressWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Engine\WurmAssistant.resx">
+      <DependentUpon>WurmAssistant.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SoundNotify\FormSoundNotifyConfig.resx">
+      <DependentUpon>FormSoundNotifyConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SoundNotify\FormSoundNotifyConfigDialog.resx">
+      <DependentUpon>FormSoundNotifyConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Timers\FormAlignmentHelp.resx">
+      <DependentUpon>FormAlignmentHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Timers\FormChooseQTimerManually.resx">
+      <DependentUpon>FormChooseQTimerManually.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Timers\FormGodChoice.resx">
+      <DependentUpon>FormGodChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Timers\FormTimersDebug.resx">
+      <DependentUpon>FormTimersDebug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Timers\FormVerifyAlignment.resx">
+      <DependentUpon>FormVerifyAlignment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityClasses\PopupManager\FormPopupContainer.resx">
+      <DependentUpon>FormPopupContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityClasses\SoundBank\FormChooseSound.resx">
+      <DependentUpon>FormChooseSound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Timers\FormTimers.resx">
+      <DependentUpon>FormTimers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Engine\WurmAssistantAbout.resx">
+      <DependentUpon>WurmAssistantAbout.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WurmAssistantAbout1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Modules\SoundNotify\soundnotifyicon.ico" />
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="msvcr100.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="whatsnew.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="userguide.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="WurmAssistant_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WurmAssistantImage.bmp" />
+    <None Include="WurmAssistantIcon.ico" />
+    <EmbeddedResource Include="UtilityClasses\SoundBank\FormSoundBankRename.resx">
+      <DependentUpon>FormSoundBankRename.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityClasses\SoundBank\FormSoundBank.resx">
+      <DependentUpon>FormSoundBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WurmAssistantIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CHANGELOG.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Credits.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ikpMP3.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Default\defQueueSound.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\irrklang_small.png" />
+    <None Include="Resources\SoundEnabled.png" />
+    <None Include="Resources\SoundDisabled.png" />
+    <None Include="Resources\SoundDisabledSmall.png" />
+    <None Include="Resources\SoundEnabledSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

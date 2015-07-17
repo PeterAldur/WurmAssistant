@@ -1,0 +1,23 @@
+﻿>>Alignment conditions:
+>Butchering a human corpse (- 1) >> counts for BL, butchering players and tower guards
+>Burying a human corpse (+ 2) >> counts for WL, burying players and tower guards
+>Listening to a confession (+/- 1) >> complete
+>Confessing to a priest (+/- 5) >> complete
+>Holding a sermon (+/- 1) >> complete
+>Listening to a sermon (up to +/- 4 (depends on preaching success)) >> complete
+Converting someone to your religion (+/- 1) >> missing log messages that indicate this
+Healing someone else (+ 1) >> not possible, no info who is being healed
+Successful Lockpicking (-5) >> missing log messages that indicate this
+Casting Bless on players (seems random). (+ 1) >> missing log messages that indicate this
+Sacrificing items in an altar (at least worth 50c get price) (+/- 1) >> missing log messages that indicate this
+Praying at the White Light on the Wild server. (+ 3) >> missing log messages that indicate this
+Praying at the Black Light on the Wild server. (- 3) >> missing log messages that indicate this
+Desecrating an altar (- 2) >> missing log messages that indicate this
+Killing of a whitelighter (- 5) >> not possible
+Killing of a blacklighter (+ 5) >> not possible
+Fo special: plant a sprout or a flower (+ 1) >> complete
+Vynora special: cutting down an old, very old or overaged tree (+ 1) >> works for any tree regardless age
+Vynora special: working on walls (+ 0.5)  >> what walls?
+Magranon special: mine (+ 0.5) >> complete
+Magranon special: kill a creature (+ 0.5) >> works for any creature killed around, may work on killing other players (not tested)
+Libila special: kill a creature (- 0.5) >> works for any creature killed around, may work on killing other players (not tested)

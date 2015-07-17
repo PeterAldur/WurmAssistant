@@ -1,0 +1,131 @@
+﻿=======NOT FIXED======
+
+
+
+=========FIXED=========
+
+parsing issues:
+
+-------- 
+
+Failed horse (detected as male):
+
+smile cond: You smile at Aged fat Heartwest.
+attempting to start processing horse due to line: You smile at Aged fat Heartwest.
+extracting object name
+object assumed to be a horse
+building new horse object and moving to processor
+finished building
+horse set to male
+found maybe trait line: It has fleeter movement than normal. It has a strong body. It has lightning movement. It can carry more than average. It has very strong leg muscles.
+line verified as traits
+extracting traits
+matched trait: FleeterMovement
+matched trait: StrongBody
+matched trait: LightningMovement
+matched trait: CarryMoreThanAverage
+matched trait: VeryStrongLegs
+trait parsing finished
+found maybe prengant line
+found horse to be pregnant, est delivery: 10/03/2013 19:58:51
+finished parsing pregnant line
+found maybe parents line
+set mother to: Tesssouth
+set father to: Raintom
+finished parsing parents line
+processing timed out, attempting to verify and apply last inspected horse
+finishing processing horse: Heartwest
+horse data is valid
+HERD: attempting to add/update new horse
+HERD: found existing horse in herd Default, applying
+applied
+updated horse data: Heartwest
+processor buffer cleared
+
+[22:58:49] You smile at Aged fat Heartwest.
+[22:58:50] Horses like this one have many uses.
+[22:58:50] She is very strong and has a good reserve of fat.
+[22:58:50] This creature could use some grooming.
+[22:58:50] It has fleeter movement than normal. It has a strong body. It has lightning movement. It can carry more than average. It has very strong leg muscles.
+[22:58:50] She will deliver in about 8.
+[22:58:50] Mother is Aged fat Tesssouth. Father is Venerable fat Raintom.
+
+working horse:
+
+smile cond: You smile at Young fat Goldenstrong.
+attempting to start processing horse due to line: You smile at Young fat Goldenstrong.
+extracting object name
+object assumed to be a horse
+building new horse object and moving to processor
+finished building
+horse set to male
+found maybe trait line: It has fleeter movement than normal. It has a strong body. It has lightning movement. It can carry more than average. It has very strong leg muscles.
+line verified as traits
+extracting traits
+matched trait: FleeterMovement
+matched trait: StrongBody
+matched trait: LightningMovement
+matched trait: CarryMoreThanAverage
+matched trait: VeryStrongLegs
+trait parsing finished
+found maybe parents line
+set mother to: Heartwest
+set father to: Goldenhappy
+finished parsing parents line
+processing timed out, attempting to verify and apply last inspected horse
+finishing processing horse: Goldenstrong
+horse data is valid
+HERD: attempting to add/update new horse
+HERD: found existing horse in herd Default, applying
+applied
+updated horse data: Goldenstrong
+processor buffer cleared
+
+[23:01:50] You smile at Young fat Goldenstrong.
+[23:01:51] A foal skips around here merrily.
+[23:01:51] He is extremely well nourished.
+[23:01:51] This creature could use some grooming.
+[23:01:51] It has fleeter movement than normal. It has a strong body. It has lightning movement. It can carry more than average. It has very strong leg muscles.
+[23:01:51] Mother is Aged fat Heartwest. Father is Aged fat Goldenhappy.
+
+> male/female parse fix to startsWith (he, she): 1.4.0.18
+
+---------
+
+failed (no traits detected):
+
+[12:22:30] You smile at Aged fat Piepot.
+[12:22:32] Horses like this one have many uses.
+[12:22:32] He is very strong and has a good reserve of fat.
+[12:22:32] The legs are of different length.
+[12:22:32] Mother is Old fat horse. Father is Aged fat horse.
+
+working:
+
+[12:25:22] You smile at Adolescent fat Tearwind.
+[12:25:23] Horses like this one have many uses.
+[12:25:23] He is very strong and has a good reserve of fat.
+[12:25:23] It will fight fiercely. The legs are of different length.
+[12:25:23] Father is Old fat horse.
+
+> fixed via adding smart trait lines identification: 1.4.0.18
+
+---------
+
+- My animal husbandry skill isn't detected correctly - probably a decimal point problem since I use , instead of . for decimals? (my skill is 35.84)
+[12:29:59] ! Granger: Animal husbandry skill was adjusted from 358460 to 100
+[12:29:59] Granger: found out Geisha AH skill to be: 100
+
+[12:43:12] Animal husbandry increased by 0,00780 to 35,8539
+
+> recoded skill numbers parsing to be fully culture invariant: 1.4.0.18
+
+---------
+
+- Small nusiance - the trait panel of the default screen doesn't resize to show all 3 columns until I reduce the size of the first column (it shows a scroll bar at the bottom of the window). 
+Resizing/maxmizing the granger window doesn't fix it since the vertical separator seems to be undragable. 
+Screenshot: http://i.imgur.com/1Jsr0xg.png
+
+> fixed by resizing: 1.4.0.18
+
+---------
